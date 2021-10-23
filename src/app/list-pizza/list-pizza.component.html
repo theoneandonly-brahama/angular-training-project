@@ -1,0 +1,17 @@
+<h1>Nos Choix De Pizza</h1>
+
+    <div class="container">
+        <ng-container *ngFor="let p of lesPizzas" class="list-group">
+            <app-pizza-exmp [pizz]="p" [ngClass]="{
+                'list-group-item':true, 'bg-warning': !p.veg
+            }" >
+               
+                    
+        </app-pizza-exmp>
+
+        </ng-container> 
+           
+    
+    </div>
+        
+    

@@ -1,0 +1,13 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.comment{
+    text-decoration: underline;
+    color: deepskyblue;
+}
+
+.comment:hover{
+    color:crimson;
+}

@@ -1,0 +1,38 @@
+
+
+<span class="badge bg-dark">
+    {{pizz. nom}}
+</span>
+
+<br>
+<div class="d-flex justify-content-between ">
+    <img [src]="pizz.image" class="rounded-circle">
+   Prix : {{pizz.prix|number :'2.3-3' }} DT
+</div>
+<br>
+    <input type="button" class="btn btn-link" (click)="afficher()" value="Afficher Les Commentaires"/>
+    <br>
+<div [hidden]="aff">
+
+    <ul class="list-group ">
+        <li *ngFor="let c of pizz.comments" [ngClass]="{'list-group-item':true, 'bg-warning':!pizz.veg}">
+            
+            <app-commentaire [comm]="c" ></app-commentaire>
+        </li>
+    </ul>
+<br>
+    <span class="d-flex justify-content-center ">
+        <input type="text" [(ngModel)]="n" placeholder="Your Username" class="rounded-pill"/>
+        <br><br>
+        <input type="text" [(ngModel)]="c" placeholder="Your Comment" class=" rounded-pill"/>
+        <input type="button" class ="btn btn-success rounded-pill"  (click)="ajout()" value="post" />
+    
+    </span> 
+    
+    
+</div>
+
+
+
+
+<br>
